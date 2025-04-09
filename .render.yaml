@@ -1,0 +1,6 @@
+
+services:
+  - type: worker
+    name: super-flips-filtered-bot
+    env: docker
+    plan: free
