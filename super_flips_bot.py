@@ -1,3 +1,13 @@
+if __name__ == '__main__':
+    print("👋 Бот реально запущен — привет из __main__!")
+    check_facebook()
+    check_offerup()
+    check_craigslist()
+    while True:
+        schedule.run_pending()
+        time.sleep(10)
+
+
 import time
 import os
 import requests
