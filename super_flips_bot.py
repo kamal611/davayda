@@ -1,13 +1,3 @@
-if __name__ == '__main__':
-    print("👋 Бот реально запущен — привет из __main__!")
-    check_facebook()
-    check_offerup()
-    check_craigslist()
-    while True:
-        schedule.run_pending()
-        time.sleep(10)
-
-
 import time
 import os
 import requests
@@ -109,14 +99,13 @@ def check_craigslist():
     except Exception as e:
         print("❌ Craigslist ошибка:", e)
 
+# Запускаем расписание
 schedule.every(2).minutes.do(check_facebook)
 schedule.every(3).minutes.do(check_offerup)
 schedule.every(4).minutes.do(check_craigslist)
 
-print("✅ Super Flips Bot с фильтрами запущен!")
-
 if __name__ == '__main__':
-    print("🔥 Вошли в __main__")
+    print("👋 Бот реально запущен — привет из __main__!")
     check_facebook()
     check_offerup()
     check_craigslist()
